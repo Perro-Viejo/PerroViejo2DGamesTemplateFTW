@@ -1,0 +1,350 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/GUI/OptionsSections/OptionsMain.gd" type="Script" id=1]
+[ext_resource path="res://assets/resources/style_box_flat/bordered_box.tres" type="StyleBox" id=2]
+[ext_resource path="res://src/GUI/OptionsSections/ResolutionMenu.gd" type="Script" id=3]
+[ext_resource path="res://src/GUI/Buttons/OptionsToggle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/GUI/Buttons/OptionsButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/GUI/OptionsSections/AudioMenu.gd" type="Script" id=6]
+[ext_resource path="res://src/GUI/Buttons/OptionsSlider.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/GUI/OptionsSections/Languages.gd" type="Script" id=8]
+[ext_resource path="res://src/GUI/Buttons/DefaultButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/resources/dynamic_fonts/menu_button_12.tres" type="DynamicFont" id=12]
+
+[node name="Main" type="HBoxContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 312.0
+margin_bottom = 172.0
+custom_constants/separation = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsContainer" type="MarginContainer" parent="."]
+margin_top = 114.0
+margin_right = 101.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsContainer"]
+margin_right = 43.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_constants/separation = 2
+
+[node name="Resolution" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
+margin_right = 43.0
+margin_bottom = 11.0
+focus_neighbour_top = NodePath("../Back")
+focus_previous = NodePath("../Back")
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Resolution"
+align = 0
+
+[node name="Audio" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
+margin_top = 13.0
+margin_right = 22.0
+margin_bottom = 24.0
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Audio"
+align = 0
+
+[node name="Languages" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
+margin_top = 26.0
+margin_right = 40.0
+margin_bottom = 37.0
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Language"
+align = 0
+
+[node name="Controls" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
+visible = false
+margin_top = 39.0
+margin_right = 35.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Controls"
+align = 0
+
+[node name="Back" parent="OptionsContainer/VBoxContainer" groups=[
+"FocusGroup",
+"OptionsMain",
+] instance=ExtResource( 9 )]
+margin_top = 39.0
+margin_right = 39.0
+margin_bottom = 50.0
+focus_neighbour_bottom = NodePath("../Resolution")
+focus_next = NodePath("../Resolution")
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Back [ x ]"
+align = 0
+
+[node name="PanelsContainer" type="HBoxContainer" parent="."]
+margin_left = 101.0
+margin_top = 58.0
+margin_right = 202.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 0, 106 )
+size_flags_horizontal = 7
+size_flags_vertical = 8
+alignment = 2
+
+[node name="ResolutionMenu" type="Panel" parent="PanelsContainer"]
+visible = false
+margin_right = 101.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+highlight = Color( 1, 1, 0.921569, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/ResolutionMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Resolution" type="Label" parent="PanelsContainer/ResolutionMenu/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 12.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 12 )
+text = "Resolution"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsContainer/ResolutionMenu/VBoxContainer"]
+margin_left = 12.0
+margin_top = 16.0
+margin_right = 88.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer"]
+margin_right = 76.0
+margin_bottom = 53.0
+size_flags_vertical = 3
+
+[node name="Fullscreen" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_right = 76.0
+margin_bottom = 10.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Close")
+focus_previous = NodePath("../Close")
+
+[node name="Borderless" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 14.0
+margin_right = 76.0
+focus_neighbour_left = NodePath(".")
+text = "Borderless"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 76.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScaleDown" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
+focus_neighbour_left = NodePath(".")
+focus_neighbour_right = NodePath("../ScaleUp")
+
+[node name="Scale" type="Label" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 14.0
+margin_right = 62.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 48, 0 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.494118, 0.494118, 0.560784, 1 )
+text = "Scale"
+align = 1
+
+[node name="ScaleUp" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
+margin_left = 66.0
+margin_right = 76.0
+focus_neighbour_left = NodePath("../ScaleDown")
+
+[node name="Close" parent="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 9 )]
+margin_left = 14.0
+margin_top = 42.0
+margin_right = 62.0
+margin_bottom = 53.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../HBoxContainer/ScaleUp")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Fullscreen")
+focus_next = NodePath("../Fullscreen")
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Cerrar [ X ]"
+
+[node name="AudioPanel" type="Panel" parent="PanelsContainer"]
+visible = false
+margin_right = 101.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/AudioPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -10.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" type="Label" parent="PanelsContainer/AudioPanel/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 12.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 1, 1, 0.921569, 1 )
+text = "Audio"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/AudioPanel/VBoxContainer"]
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/margin_right = 4
+custom_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer"]
+margin_left = 5.0
+margin_right = 97.0
+margin_bottom = 86.0
+
+[node name="AudioOptions" type="VBoxContainer" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_right = 92.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+custom_constants/separation = 4
+
+[node name="Master" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions" instance=ExtResource( 7 )]
+margin_right = 92.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+
+[node name="ScaleName" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions/Master" index="0"]
+margin_right = 92.0
+
+[node name="HSlider" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions/Master" index="1"]
+margin_right = 92.0
+focus_neighbour_top = NodePath("../../Close")
+focus_previous = NodePath("../../Close")
+
+[node name="Music" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions" instance=ExtResource( 7 )]
+margin_top = 25.0
+margin_right = 92.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+
+[node name="SFX" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions" instance=ExtResource( 7 )]
+margin_top = 50.0
+margin_right = 92.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Close" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_top = 75.0
+margin_right = 70.0
+margin_bottom = 86.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_bottom = NodePath("../Master/HSlider")
+focus_next = NodePath("../Master/HSlider")
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Cerrar [ X ]"
+
+[node name="LanguagePanel" type="Panel" parent="PanelsContainer"]
+margin_right = 101.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/LanguagePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Languages" type="Label" parent="PanelsContainer/LanguagePanel/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 12.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 12 )
+text = "Languages"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/LanguagePanel/VBoxContainer"]
+margin_top = 16.0
+margin_right = 101.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/margin_right = 4
+custom_constants/margin_left = 5
+
+[node name="LanguageOptions" type="VBoxContainer" parent="PanelsContainer/LanguagePanel/VBoxContainer/MarginContainer"]
+margin_left = 5.0
+margin_right = 97.0
+margin_bottom = 11.0
+grow_vertical = 0
+
+[node name="Close" parent="PanelsContainer/LanguagePanel/VBoxContainer/MarginContainer/LanguageOptions" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_right = 70.0
+margin_bottom = 11.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_bottom = NodePath("../Master/HSlider")
+focus_next = NodePath("../Master/HSlider")
+custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
+text = "Cerrar [ X ]"
+
+[node name="EmptySpace" type="MarginContainer" parent="."]
+margin_left = 202.0
+margin_right = 304.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+[connection signal="pressed" from="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/Borderless" to="." method="_on_Borderless_pressed"]
+
+[editable path="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer/AudioOptions/Master"]

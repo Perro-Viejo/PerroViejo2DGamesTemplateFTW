@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/gui/talking.png" type="Texture" id=1]
+[ext_resource path="res://src/GUI/TalkingBubble/TalkingBubble.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/m5x7.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 3 )
+
+[node name="TalkingBubble" type="Control"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="TextureRect" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite"]
+margin_left = 4.0
+margin_top = -6.0
+margin_right = 13.0
+margin_bottom = 12.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.133333, 0.137255, 0.137255, 1 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=14 freq=8].[/wave][wave amp=14 freq=9].[/wave][wave amp=14 freq=10].[/wave]"
+meta_underlined = false
+text = "..."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

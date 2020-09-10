@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_note_dialogue_02.ogg-6b6fcc7883dbd128468eb08a50e4675c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/ui_note_dialogue_02.ogg"
+dest_files=[ "res://.import/ui_note_dialogue_02.ogg-6b6fcc7883dbd128468eb08a50e4675c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

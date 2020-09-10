@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/resources/dynamic_fonts/menu_button_12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/images/gui/slider_grabber-highlight.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/gui/slider_grabber.png" type="Texture" id=3]
+[ext_resource path="res://assets/resources/style_box_flat/options_slider.tres" type="StyleBox" id=4]
+[ext_resource path="res://assets/resources/style_box_flat/options_grabber_highlight.tres" type="StyleBox" id=5]
+[ext_resource path="res://assets/resources/style_box_flat/options_grabber.tres" type="StyleBox" id=6]
+[ext_resource path="res://src/GUI/Buttons/OptionsSlider.gd" type="Script" id=7]
+
+[node name="OptionsSlider" type="VBoxContainer"]
+margin_right = 47.0
+margin_bottom = 13.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+highlight = Color( 1, 1, 0.921569, 1 )
+
+[node name="ScaleName" type="Label" parent="."]
+margin_right = 47.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 36, 0 )
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.494118, 0.494118, 0.560784, 1 )
+text = "Master"
+align = 1
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_top = 14.0
+margin_right = 47.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_icons/tick = ExtResource( 2 )
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = ExtResource( 4 )
+custom_styles/grabber_area_highlight = ExtResource( 5 )
+custom_styles/grabber_area = ExtResource( 6 )
+value = 50.0
+ticks_on_borders = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
+
+[node name="World" type="Node2D"]
+position = Vector2( -150.076, -1.8877 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 180.0, -720.0, 720.0 ],
+"_edit_vertical_guides_": [ 1913.0, 1280.0, -1280.0 ]
+}
+
+[node name="WorldLayer" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="Player" parent="WorldLayer" instance=ExtResource( 1 )]
+position = Vector2( -1047.69, 560.425 )
+collision_mask = 0

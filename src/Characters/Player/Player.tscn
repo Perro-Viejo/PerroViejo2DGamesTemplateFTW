@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://src/Characters/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/StateMachine/StateMachine.gd" type="Script" id=3]
+[ext_resource path="res://src/Characters/Player/States/Idle.gd" type="Script" id=4]
+[ext_resource path="res://assets/images/characters/outline.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.64699, 3.57263 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 3.06255
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1, 0.5 )
+
+[node name="Player" type="KinematicBody2D"]
+z_index = 5
+collision_mask = 4
+script = ExtResource( 2 )
+dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+editor_draw_drag_margin = true
+
+[node name="StateMachine" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Idle" type="Node2D" parent="StateMachine"]
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
+frames = SubResource( 2 )
+animation = "Idle"
+
+[node name="PlayerArea" type="Area2D" parent="."]
+visible = false
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+shape = SubResource( 3 )
+
+[node name="FootArea" type="Area2D" parent="."]
+visible = false
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootArea"]
+position = Vector2( 0.5, 4.12547 )
+shape = SubResource( 4 )
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource( 1 )

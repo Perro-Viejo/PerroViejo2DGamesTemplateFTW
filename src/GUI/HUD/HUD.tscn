@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/GUI/HUD/HUD.gd" type="Script" id=2]
+[ext_resource path="res://src/GUI/Dialog/Dialog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/GUI/TalkingBubble/TalkingBubble.tscn" type="PackedScene" id=5]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" parent="Control" instance=ExtResource( 3 )]
+
+[node name="TalkingBubble" parent="Control" instance=ExtResource( 5 )]
+
+[node name="Tween" type="Tween" parent="."]

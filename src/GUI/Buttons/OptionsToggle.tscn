@@ -1,0 +1,40 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/images/gui/check_button_off.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/gui/check_button_on.png" type="Texture" id=2]
+[ext_resource path="res://assets/resources/dynamic_fonts/menu_button_12.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/GUI/Buttons/OptionsToggle.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="OptionsToggle" type="CheckButton"]
+margin_right = 94.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+custom_icons/off = ExtResource( 1 )
+custom_icons/on = ExtResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/hover_pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Fullscreen  "
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+highligth = Color( 1, 1, 0.921569, 1 )
+normal = Color( 0.494118, 0.494118, 0.560784, 1 )

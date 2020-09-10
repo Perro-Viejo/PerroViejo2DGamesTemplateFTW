@@ -1,0 +1,80 @@
+id,en,es
+Right,Right,Derecha
+Left,Left,Izquierda
+Up,Up,Arriba
+Down,Down,Abajo
+Jump,Jump,Saltar
+Shoot,Shoot,Disparar
+NEW_GAME,New game,Nuevo juego
+CONTINUE,Continue,Continuar
+RESUME,Resume,Reanudar
+RESTART,Restart,Reiniciar
+CREDITS,Credits,Créditos
+OPTIONS,Options,Opciones
+MAIN_MENU,Main Menu,Menú principal
+BACK,Back,Atrás
+EXIT,Exit,Salir
+PAUSE,Pause,Pausa
+LOADING,Loading,Cargando
+RESOLUTION,Resolution,Resolución
+FULLSCREEN,Fullscreen window,Pantalla completa
+BORDERLESS,Borderless window,Pantalla sin bordes
+SCALE,Scale,Escalado
+VOLUME,Volume,Volumen
+MASTER,Master,General
+MUSIC,Music,Música
+SFX,Sounds,Efectos de Sonido
+CONTROLS,Controls,Controles
+ACTIONS,Actions,Acciones
+KEYBOARD,Keyboard,Teclado
+GAMEPAD,Gamepad,Gamepad
+DEFAULT,Default,Defecto
+USE_NEW_CONTROLS,Use new control!,Usar nuevos controles!
+CANCEL,Cancel,Cancelar
+LANGUAGES,Languages,Idiomas
+DEMON_SALUTE_01,Hi Teosad,Hola Teotriste
+DEMON_SALUTE_02,Fear me for I am...,Siente la emoción de conocer mi nombre...
+DEMON_SALUTE_03,^^^Kaloching^^^,^^^Kaloches^^^
+DEMON_GREET,Hi Bitchy Boy,Hola mi pex
+DEMON_GOODBYE,Bai Bai,Chau
+DEMON_EAT_POS,Yum Yum,Rico rico :3!!
+DEMON_EAT_NEG,Nein,In nomine patris T-T!!!
+DEMON_EAT_IGUANA,Nicy lizardo,Mmm... sabrosa y protectora Teyú
+DEMON_EAT_JAGUAR,Yum Yum... tasty cat,Yum Yum... puedo saborear los misterios ocultos del Jaguar
+DEMON_EAT_CRICKET,No luck for pity cricker,No tuviste suerte esta vez Grillito
+DEMON_EAT_HEN,Kentucky fried chicken,¡Deliciosa gallina! Nada sagrada por cierto... -.-
+DEMON_EAT_MONKEY,I'm a eat the ape!,"Es muy sabio el viejo macaco, pero eso no lo hace sagrado... -.-"
+P_ROCK,Rock,Piedra
+P_MICO,Mico,Macaco
+P_TABLE,Table,Mesa
+P_TOUCAN,Toucan,Tucán
+P_CHAIR,Chair,Silla
+P_CRICKET,Cricket,Grillo
+P_HEN,Hen,Gallina
+P_IGUANA,Iguana,Iguana
+P_JAGUAR,Jaguar,Jaguar
+P_FISH,Fish,Pescaito
+F_DOG,Thanks!,¡Gracias! Toto Santos
+F_CRICKET_GOD, Staaaaap!,Humano. Me has encontrado.\nPídeme lo que quieras. (  u )3( u )
+WORLD,Sierra de la Macarena,Sierra de la Macarena
+TOWN,Piñalito,Piñalito
+FOREST,La Madre Vieja,La Madre Vieja
+TEMPLE,Templo del dios Kuarebachu,Templo del dios Kuarebachu
+RIVER,Caño Cristales,Caño Cristales
+LAKE,La Culiandanga,La Culiandanga
+INTRO_01,Teotriste había logrado llegar a la Sierra de la Macarena. La oscuridad cubriendo leguas de inextricable selva y ciénega. ,Teotriste había logrado llegar a la Sierra de la Macarena. La oscuridad cubriendo leguas de inextricable selva y ciénega. 
+INTRO_02,"Lo cierto es que el hombre apenas se movía, ignorando las ramas que le dilaceraban las carnes y se arrastró, mareado y ensangrentado, hasta el recinto triangular que corona un oso hormiguero de piedra, que tuvo alguna vez el color del fuego y ahora el de la ceniza. ","Lo cierto es que el hombre apenas se movía, ignorando las ramas que le dilaceraban las carnes y se arrastró, mareado y ensangrentado, hasta el recinto triangular que corona un oso hormiguero de piedra, que tuvo alguna vez el color del fuego y ahora el de la ceniza. "
+INTRO_03,"El forastero se tendió bajo el pedestal, sintiendo sólo el frío del miedo. Cerró los ojos y durmió.","El forastero se tendió bajo el pedestal, sintiendo sólo el frío del miedo. Cerró los ojos y durmió."
+INTRO_04,"Al principio los sueños eran caóticos pero poco después, el forastero se soñaba - estaba frente a un pequeño fuego, activo y caluroso, sobrenatural.","Al principio los sueños eran caóticos pero poco después, el forastero se soñaba - estaba frente a un pequeño fuego, activo y caluroso, sobrenatural."
+DEMON_01,,"La luna es oscura, Teotriste."
+TEO_01,,"Nuestros cultivos ya no florecen, los animales\nmueren en la soledad. Por favor, oh Dios Kuarevachú,\nayúdame a volver la luz al mundo."
+DEMON_02,,"Estoy al borde de la muerte y sin embargo,\nte atreves a pedirme algo casi imposible."
+TEO_02,,"Mantendré tu fuego vivo, cueste lo que cueste.\nCruzaré esta Sierra si es necesario."
+DEMON_03,,"No será tan fácil, Teotriste,\nTendrás que superar mis acertijos y\ntraer como ofrenda la encomienda que te pido."
+TEO_03,,Así será.
+DEMON_04,,Pero me lastimarás hasta mi fuego extinguir\nsi arrojas a mis llamas un objeto prohibido\n...y no podré cumplir tu petición.
+TEO_04,,...
+DEMON_05,,¿Ves ese pequeño tucán?\nPuedes levantarlo con la tecla Z.\nPara arrojarlo a mi presiona la tecla X.
+DEMON_06,,Perfecto. Resuelve el primer acertijo\ny camina por la Sierra hasta encontrarlo.
+CLICK_CONTINUE,Click to continue,Presiona Z para continuar
+,,"Pareces un poco inexperto,\nasí que te contaré también que con las flechas,\nte puedes mover por el mapa."

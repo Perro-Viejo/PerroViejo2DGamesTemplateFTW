@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/resources/dynamic_fonts/menu_button_12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/GUI/Buttons/ButtonStyle_Normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/resources/style_box_flat/button_focus.tres" type="StyleBox" id=3]
+[ext_resource path="res://assets/resources/style_box_flat/button_normal.tres" type="StyleBox" id=4]
+
+[node name="DefaultButton" type="Button"]
+margin_right = 36.0
+margin_bottom = 15.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.494118, 0.494118, 0.560784, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0.921569, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 0.921569, 1 )
+text = "Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
